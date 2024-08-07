@@ -7,3 +7,8 @@ function between(a, b) {
   }
 
   console.log(between(1, 4)); // [1, 2, 3, 4]
+
+  function sixToast(num) {
+    return (num >= 6) ? num - 6 : num;
+  }
+
