@@ -186,3 +186,4 @@ function powersOfTwo(n){
 function solution(a, b){
   return (b.length > a.length) ? `${a}${b}${a}` : `${b}${a}${b}`
 }
+
