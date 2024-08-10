@@ -389,3 +389,351 @@ function fakeBin(x){
 
 
 
+function makeNegative(num){
+  if (num > 0){
+      return (-num);
+  } else {
+      return num;
+  }
+}
+
+// or
+
+function makeNegative(num){
+return num > 0 ? (- num) : num;
+}
+
+
+
+function positiveSum(arr){
+	var pos = 0;
+	arr.forEach(a => {
+		if (a > 0){
+			pos += a;
+		}
+	});
+	return pos;
+}
+
+
+
+function removeChar(s){
+	var answer = s.slice(1, -1);
+	return answer;
+};
+
+
+
+function squareSum(numbers){
+	var sums = 0;
+	for (let i = 0; i < numbers.length; i++){
+		var num = numbers[i] * numbers[i];
+		sums = sums + num;
+	}
+	return sums;
+}
+
+
+const stringToNumber = function(str){
+	return parseInt(str, 10);
+}
+
+
+function greet(){
+	return "hello world!";
+}
+
+
+function countSheeps(arrayOfSheep) {
+	var answer = 0;
+	for(var s = 0; s < arrayOfSheep.length; s++){
+		if (arrayOfSheep[s] == true){
+			answer += 1;
+			}
+		}
+	return answer;
+}
+
+
+function greet(name){
+	var greet = "Hello, " + name + " how are you doing today?";
+	return(greet)
+}
+
+
+function booleanToString(b){
+	if (b == true){
+		return 'true';
+	} else if (b == false){
+		return 'false';
+	}
+}
+
+// or
+
+function booleanToString(b){
+	return b == true ? "true" : "false";
+}
+
+
+function basicOp(operation, value1, value2){
+	if (operation == "/" && value2 == 0.0){
+		return 0;
+	}
+	switch(operation){
+		case ("+"): return (value1 + value2);
+		case ("-"): return (value1 - value2);
+		case ("*"): return (value1 * value2);
+		case ("/"): return (value1 / value2);
+		default: return 0;
+	}
+}
+
+
+
+function maps(x){
+	var arr = []
+	x.forEach(i => {
+		arr.push(i * 2);
+	});
+	return arr;
+}
+
+
+
+function digitize(n) {
+	var arr = n.toString().split('').reverse().map(Number);
+	return arr;
+}
+
+
+function sum(numbers){
+	var sum_a = 0;
+	for (var n = 0; n < numbers.length; n++){
+		sum_a += numbers[n]
+	}
+	return sum_a;
+};
+
+
+
+function simpleMultiplication(number) {
+	if (number % 2 == 0){
+		return number * 8;
+	} else {
+		return number * 9;
+	}
+}
+
+
+function findNeedle(haystack) {
+	var needle = haystack.indexOf('needle');
+	return "found the needle at position " + needle;
+}
+
+
+function find_average(arr){
+	var sum_n = 0
+	if (arr.length == 0){
+		return 0;
+	} else {
+		let sum_n = arr.reduce((a, b) => a + b) / arr.length
+		return sum_n
+	}
+}
+
+
+
+function smash (words) {
+	return words.join(" ");
+};
+
+
+
+function grow(x){
+	return x.reduce((a, b) => a*b);
+}
+
+
+
+function bmi(weight, height) {
+	var bmi = weight / height**2;
+	if (bmi <= 18.5){
+		return "Underweight";
+	} else if (bmi <= 25.0){
+		return "Normal";
+	} else if (bmi <= 30.0){
+		return "Overweight";
+	} else {
+		return "Obese";
+	}
+}
+
+
+
+function check(a, x){
+	return a.includes(x);
+}
+
+
+
+function reverseSeq(n){
+	var arr = [];
+	for (let i = n; i > 0; i--){
+		arr.push(i);
+	}
+	return arr;
+}
+
+
+function stringToArray(string){
+	return string.split(' ');
+}
+
+
+
+const rps = (p1, p2) => {
+	var cases = ['rock', 'paper', 'scissors'];
+	if (p1 == p2){
+		return "Draw!";
+	} else if (p1 == cases[0] && p2 == cases[1]){
+		return "Player 2 won!";
+	} else if (p1 == cases[0] && p2 == cases[2]){
+		return "Player 1 won!";
+	} else if (p1 == cases[1] && p2 == cases[2]){
+		return "Player 2 won!";
+	} else if (p1 == cases[1] && p2 == cases[0]){
+		return "Player 1 won!";
+	} else if (p1 == cases[2] && p2 == cases[0]){
+		return "Player 2 won!";
+	} else if (p1 == cases[2] && p2 == cases[1]){
+		return "Player 1 won!";
+	} 
+};
+
+
+function greet (name, owner) {
+	return name == owner ? 'Hello boss' : 'Hello guest';
+}
+
+
+function getGrade (s1, s2, s3) {
+	if ((s1 + s2 + s3) / 3 >= 90 && (s1 + s2 + s3) / 3 <= 100){
+		return "A";
+	} else if ((s1 + s2 + s3) / 3 >= 80 && (s1 + s2 + s3) / 3 < 90){
+		return "B";
+	} else if ((s1 + s2 + s3) / 3 >= 70 && (s1 + s2 + s3) / 3 < 80){
+		return "C";
+	} else if ((s1 + s2 + s3) / 3 >= 60 && (s1 + s2 + s3) / 3 < 70){
+		return "D";
+	} else {
+		return "F";
+	}
+}
+
+
+function greet(name){
+	if(name === "Johnny"){
+		return "Hello, my love!";
+	} else {
+		return "Hello, " + name + "!";
+	}
+}
+
+
+
+function points(games) {
+	var score = 0;
+	games.forEach(g => {
+		if (g[0] > g[2]){
+			score = score + 3;
+		} else if (g[0] < g[2]){
+			score = score +0;
+		} else if (g[0] == g[2]){
+			score = score +1
+		}
+	});
+	return score;
+}
+
+
+class Kata {
+	static getVolumeOfCuboid(length, width, height) {
+		return(length * width * height);
+	}
+}
+
+
+
+const areaOrPerimeter = function(l , w){
+	if (l == w){
+		return l * w;
+	} else {
+		return 2*l + 2*w;
+	}
+};
+
+
+
+function setAlarm(employed, vacation){
+	return employed && !vacation;
+}
+
+
+function sumMix(x){
+	return x.reduce((a, b) => parseInt(a) + parseInt(b), 0);
+}
+
+function sumArray(array) {
+	if (array && array.length > 1){
+		var arr = array.sort((a,b) => a - b).slice(1, -1);
+		return arr.reduce((x, y) => x + y, 0);
+	} else {
+		return 0;
+	}
+}
+
+
+var min = function(list){
+  return Math.min(...list);
+}
+
+var max = function(list){
+  return Math.max(...list);
+}
+
+
+function countSheep(n){
+	if (n == 0){
+		return("")
+	} else{
+		var p = 1;
+		var sheep = "";
+		while(p <= n){
+			sheep = sheep + p.toString() + " sheep...";
+			p += 1;
+		}
+		return(sheep)
+	}
+}
+
+
+
+function feast(beast, dish) {
+	return beast[beast.length -1] == dish[dish.length -1] && beast[0] == dish[0];
+}
+
+
+
+function arrayPlusArray(arr1, arr2) {
+	var sum_a = 0;
+	for (var n = 0; n < arr1.length; n++){
+		sum_a += arr1[n]
+	}
+	for (var p = 0; p < arr2.length; p++){
+		sum_a += arr2[p]
+	}
+	return sum_a;
+}
+
+
